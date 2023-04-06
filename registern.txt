@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<?php
+   include "connection.php";
+        
+   session_start();
+   
+   
+   if(!isset($_SESSION['admin'])){
+
+   header('location:login.php');
+} 
+      
+   if(isset($_POST['submit'])){
+ 
+ 
+  
+  $name =     $_POST['user'];
+  $email =    $_POST['email'];
+  $pwd =      $_POST['pwd'];
+// $confirm =  $_POST['confirmpwd'];
+  $shop_id=    $_POST['shop_id'];
+  $floor =     $_POST['floor'];
+  $shop_desc = $_POST['shop_desc'];
+  
+ $type =     $_POST['type'];
+ 
+  
+	  
+  $q="INSERT INTO reg_form VALUES ('$name','$email','$pwd','$shop_id','$floor','$shop_desc','$type')";
+  $done=mysqli_query($conn,$q);
+ 
+    if($done){
+        
+        echo "<script>alert('Registered Successfully !! ');
+
+
+        </script>";
+        
+       
+        
+  }}
+
+  
+        
+?>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Register</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+	
+	
+	
+	  <script>
+    
+    function fun(){
+        
+        
+        var user=document.getElementById('user').value;
+        var pwd=document.getElementById('pwd').value;
+        var cpwd=document.getElementById('cpwd').value;
+       // var no=document.getElementById('no').value;
+        var email=document.getElementById('email').value;
+        
+        
+        
+        
+        
+        if(user==""){
+            
+            document.getElementById('user2').innerHTML=" ** Please Fill username ";
+            return false;
+        }
+        
+        
+        
+        if((user.length<2)||user.length>40){
+            
+            document.getElementById('user2').innerHTML=" ** Username length must between 2 to 40 ";
+            return false;
+            
+        }
+        
+        if(!isNaN(user)){
+            
+              document.getElementById('user2').innerHTML=" ** only characters are allowed ";
+            return false;
+            
+            
+            
+        }
+        
+        if(pwd==""){
+            
+            document.getElementById('pwd2').innerHTML=" ** Please Fill password ";
+            return false;
+        }
+        
+        
+        if((pwd.length<=5)||(pwd.length>=20)){
+            
+            
+             document.getElementById('pwd2').innerHTML=" ** Password length is between 6 to 20 ";
+            return false;
+            
+            
+        }
+        
+        
+        if(pwd!=cpwd){
+            
+             document.getElementById('cpwd2').innerHTML=" **please confirm password ";
+            return false;
+            
+        }
+        
+        
+        if(cpwd==""){
+            
+            document.getElementById('cpwd2').innerHTML=" ** Please Fill Confirm password ";
+            return false;
+        }
+        
+        
+        
+        
+        
+       /* if(no==""){
+            
+            document.getElementById('no2').innerHTML=" ** Please Fill Mobile No. ";
+            return false;
+        }
+        */
+        if(email==""){
+            
+            document.getElementById('mail').innerHTML=" ** Please Fill Email ";
+            return false;
+        }
+        
+        if(email.indexOf('@')<=0)
+        {
+            
+            document.getElementById('mail').innerHTML=" ** Index @ is on wrong place ";
+            return false;
+            
+            
+        }
+        
+        if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+            
+            document.getElementById('mail').innerHTML=" ** . position is on wrong place ";
+            return false;
+            
+        }
+        
+        
+        
+    }
+    
+    
+    
+   
+</script>
+    
+
+  </head>
+
+  <body class="bg-dark">
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Register an Account</div>
+        <div class="card-body">
+          <form method="post" onsubmit="return fun()">
+            <div class="form-group">
+                        
+                        <label>Username</label>
+                        <input type="text" name="user" id="user" class="form-control" required>
+                        <span id="user2" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+                 
+                        
+                        
+                         <div class="form-group">
+                        
+                        <label>E-Mail</label>
+                        <input type="text" name="email" id="email" class="form-control" autocomplete="off"  required>
+                        <span id="mail" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+                        
+                        <div class="form-group">
+                        
+                        <label>Password</label>
+                        <input type="password" name="pwd" id="pwd" class="form-control"  required> 
+                          <span id="pwd2" class="text-danger font-weight-bold"></span>
+                    </div>
+                        
+                        
+                        <div class="form-group">
+                        
+                        <label>Confirm Password</label>
+                        <input type="password" name="cpwd" id="cpwd" class="form-control"  required> 
+                        <span id="cpwd2" class="text-danger font-weight-bold"></span>
+                    </div>
+                        
+                       <div class="form-group">
+                        
+                        <label>Shop_Id</label>
+                        <input type="text" name="shop_id" id="enroll" class="form-control"  required>
+                        <span id="user2" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+					
+					 <div class="form-group">
+                        
+                        <label>Floor</label>
+                        <input type="text" name="floor" id="enroll" class="form-control"  required>
+                         
+                    </div>
+					
+					 <div class="form-group">
+                        
+                        <label>Shop Description</label>
+                        <input type="text" name="shop_desc" id="enroll" class="form-control"  required>
+                        
+                    </div>
+                    
+					
+					
+					<div class="form-group">
+                        
+                        <label>Type</label></br>
+                        <select name="type" class="form-control">
+                            <option>user</option>
+                            <option>admin</option>
+                            
+                        </select>
+                        <span id="user2" class="text-danger font-weight-bold"></span>
+                    </div>
+           <button class="btn btn-primary" type="submit" name="submit"> Submit</button>
+		   <a href="index.php" class="btn btn-secondary">Back</a>
+          </form>
+          <div class="text-center">
+            <a class="d-block small mt-3" href="login.php">Login Page</a>
+            <a class="d-block small" href="forget.php">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  </body>
+
+</html>
