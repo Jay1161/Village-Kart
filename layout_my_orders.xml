@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:elevation="15dp" app:contentPadding="5dp">
+    <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+        <ImageView android:layout_gravity="center" android:id="@+id/img_product" android:layout_width="55dp" android:layout_height="55dp" android:src="@drawable/profile_circle" android:layout_weight="0.2"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="60dp" android:layout_weight="0.8">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="10dp">
+                <TextView android:textSize="12sp" android:textStyle="normal" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/txt_product_name" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Product Name" android:textAllCaps="true"/>
+                <TextView android:textSize="12sp" android:textStyle="normal" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/txt_product_price" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 50" android:layout_below="@+id/txt_product_name" android:textAllCaps="true"/>
+                <TextView android:textSize="12sp" android:textStyle="normal" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/txt_date" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20-02-2020" android:layout_centerVertical="true" android:textAllCaps="true" android:layout_toEndOf="@+id/txt_product_name" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/myProfile_Header" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/profile_header" android:background="@color/colorPrimary" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.mikhaellopez.circularimageview.CircularImageView android:layout_gravity="center_horizontal" android:id="@+id/img_profile" android:layout_width="120sp" android:layout_height="120sp" android:layout_marginBottom="10dp" android:src="@drawable/profile_circle"/>
+                    <TextView android:textColor="#ffffffff" android:id="@+id/txt_uploadImageGallery" android:background="@drawable/ic_border_color_black_24dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="90dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/myProfile_Header">
+                <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ff777777" android:layout_width="0dp" android:layout_height="wrap_content" android:text="User Name" android:layout_weight="2"/>
+                    <EditText android:textSize="17sp" android:textColor="#ff000000" android:id="@+id/edt_userName" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="" android:singleLine="true" android:layout_weight="6"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ff777777" android:layout_width="0dp" android:layout_height="wrap_content" android:text="First Name" android:layout_weight="2"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5">
+                        <TextView android:textColor="#ff000000" android:id="@+id/txt_fullName" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Full Name here" android:singleLine="true" android:layout_weight="1"/>
+                        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@+id/edt_firstName" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your First Name here" android:singleLine="true" android:layout_weight="1"/>
+                        <TextView android:textColor="#ff777777" android:gravity="end" android:id="@+id/txt_changefirstName" android:background="@drawable/ic_border_color_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ff777777" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Last Name" android:layout_weight="2"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5">
+                        <TextView android:textColor="#ff000000" android:id="@+id/txt_lastName" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Full Name here" android:singleLine="true" android:layout_weight="1"/>
+                        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@+id/edt_lastName" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Last Name here" android:singleLine="true" android:layout_weight="1"/>
+                        <TextView android:textColor="#ff777777" android:gravity="end" android:id="@+id/txt_changelastName" android:background="@drawable/ic_border_color_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ff777777" android:layout_width="0dp" android:layout_height="wrap_content" android:text="City" android:layout_weight="2"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5">
+                        <TextView android:textColor="#ff000000" android:id="@+id/txt_city" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Full Name here" android:singleLine="true" android:layout_weight="1"/>
+                        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@+id/edt_city" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your City" android:singleLine="true" android:layout_weight="1"/>
+                        <TextView android:textColor="#ff777777" android:gravity="end" android:id="@+id/txt_changecity" android:background="@drawable/ic_border_color_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ff777777" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Address" android:layout_weight="2"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5">
+                        <TextView android:textColor="#ff000000" android:id="@+id/txt_address" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Full Name here" android:singleLine="true" android:layout_weight="1"/>
+                        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@+id/edt_address" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Address" android:singleLine="true" android:layout_weight="1"/>
+                        <TextView android:textColor="#ff777777" android:gravity="end" android:id="@+id/txt_changeaddress" android:background="@drawable/ic_border_color_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ff777777" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Email" android:layout_weight="2"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5">
+                        <TextView android:textColor="#ff000000" android:id="@+id/edt_email" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Email Is not verified" android:singleLine="true" android:layout_weight="1"/>
+                        <TextView android:textColor="#ff000000" android:id="@+id/txt_email_google" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Email Is not verified" android:singleLine="true" android:layout_weight="1"/>
+                        <TextView android:textColor="#ff000000" android:id="@+id/txt_email" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="Your Email Is not verified" android:singleLine="true" android:layout_weight="1"/>
+                        <TextView android:textColor="#ff777777" android:gravity="end" android:id="@+id/txt_change_email" android:background="@drawable/ic_border_color_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#ff777777" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Mobile No" android:layout_weight="2"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5">
+                        <TextView android:textColor="#ff000000" android:id="@+id/edt_mobile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Your Mobile is not verified" android:singleLine="true" android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/btn_update" android:background="@color/colorPrimary" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_alignParentBottom="true">
+        <TextView android:textSize="19sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" android:text="@string/update" android:textAllCaps="true"/>
+    </LinearLayout>
+</RelativeLayout>

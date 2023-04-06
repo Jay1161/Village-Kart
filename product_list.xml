@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/img_product" android:layout_width="80dp" android:layout_height="70dp" android:src="@drawable/profile_circle"/>
+            <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" android:textStyle="bold" android:textColor="@android:color/black" android:ellipsize="end" android:id="@+id/txt_product_name" android:padding="2dp" android:layout_width="125dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Mi Led TV 4A Pro" android:maxLines="2" android:layout_marginStart="18dp" android:layout_toEndOf="@+id/img_product"/>
+            <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@+id/txt_product_price" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 50" android:layout_below="@+id/txt_product_name" android:layout_marginStart="18dp" android:layout_toEndOf="@+id/img_product"/>
+            <Button android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" android:textColor="@color/white" android:id="@+id/add" android:background="@color/colorPrimary" android:layout_width="50dp" android:layout_height="35dp" android:text="Add to Cart" android:layout_centerVertical="true" android:layout_marginStart="30dp" android:layout_toEndOf="@+id/txt_product_name" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

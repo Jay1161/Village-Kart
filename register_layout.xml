@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/colorLoginSurface" android:padding="20dp" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp">
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textStyle="bold" android:textColor="@color/colorOlive" android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/register" android:textAlignment="center"/>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_firstname" android:layout_width="match_parent" android:layout_height="wrap_content" app:counterEnabled="true" app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/firstname" android:maxLength="15" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_lastname" android:layout_width="match_parent" android:layout_height="wrap_content" app:counterEnabled="true" app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/lastname" android:maxLength="15" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_address" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/address" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_city" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/city" android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_email" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/email" android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_mobile" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/mobile" android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_password" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true" app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/nf" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/password" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_confirmpassword" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true" app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/cnf" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/confirm_password" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button android:textColor="@color/white" android:id="@+id/button_register" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/register" android:onClick="register"/>
+        <TextView android:textSize="16dp" android:textColor="@color/darkBlue" android:gravity="center" android:id="@+id/link_login" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginBottom="24dp" android:text="@string/reg_alert"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/cart_container" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/Widget.ActionButton">
+    <ImageView android:id="@+id/cart_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shopping_cart"/>
+    <com.nex3z.notificationbadge.NotificationBadge android:textColor="@android:color/holo_orange_light" android:id="@+id/badge" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginLeft="-10dp" android:layout_marginTop="-10dp" android:layout_toRightOf="@+id/cart_img" android:layout_alignTop="@+id/cart_img" app:nbAnimationEnabled="false" app:nbMaxTextLength="2"/>
+</RelativeLayout>

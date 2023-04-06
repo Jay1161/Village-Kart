@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/colorLoginSurface" android:padding="20dp" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="0dp">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" android:textStyle="bold" android:textColor="@color/colorPrimary" android:gravity="center" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:text="@string/login" android:textAlignment="center"/>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_email" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/email" android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/text_input_password" android:layout_width="match_parent" android:layout_height="wrap_content" app:errorEnabled="true" app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/nf" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/password" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button android:textColor="@color/white" android:id="@+id/button_login" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/login" android:onClick="login"/>
+        <TextView android:textSize="16dp" android:textColor="@color/darkBlue" android:gravity="center" android:id="@+id/link_register" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="24dp" android:text="@string/login_alert"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
